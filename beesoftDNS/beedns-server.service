@@ -1,0 +1,11 @@
+[Unit]
+Description=Beedns Server
+
+[Service]
+ExecStart=/opt/bee/beesoftDNS/venv/bin/python /opt/bee/beesoftDNS/manage.py runserver 0.0.0.0:8000
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=default.target
